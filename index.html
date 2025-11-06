@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olamide's Everything</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="images/photo.jpg" alt="Olamide's Everything Logo" class="logo">
+        <h1>OLAMIDE'S EVERYTHING</h1>
+        <p class="motto">A BRAND OF ALL ESSENCE !!!</p>
+
+        <form class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search...">
+        </form>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="branding.html">Branding Section</a></li>
+                <li><a href="customization.html">Customized Objects Section</a></li>
+                <li><a href="design-editing.html">Design/Editing Section</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <p>Welcome to Olamide's Everything! Explore our branding, customization, and design/editing services.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Olamide's Everything. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        if(searchInput){
+            searchInput.addEventListener('input', function () {
+                const products = document.querySelectorAll('.grid-item');
+                const searchText = searchInput.value.toLowerCase();
+                products.forEach(item => {
+                    const name = item.querySelector('h2') ? item.querySelector('h2').textContent.toLowerCase() : "";
+                    item.style.display = name.includes(searchText) ? "block" : "none";
+                });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customization - Olamide's Everything</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="images/photo.jpg" alt="Olamide's Everything Logo" class="logo">
+        <h1>OLAMIDE'S EVERYTHING</h1>
+        <p class="motto">A BRAND OF ALL ESSENCE !!!</p>
+
+        <form class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search...">
+        </form>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="branding.html">Branding Section</a></li>
+                <li><a href="customization.html">Customized Objects Section</a></li>
+                <li><a href="design-editing.html">Design/Editing Section</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <p>“Make it personal, make it unforgettable. Our customized objects let you elevate your style or give gifts that truly stand out. Unique, memorable, and designed just for you.”</p>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="images/Presentes originales especiales.jpg" alt="Product 1">
+                <h2> Customized Totes Bag </h2>
+                <p>Price: ₦6,500</p>
+                <a href="https://wa.me/2348135077752" class="whatsapp-link" target="_blank">Contact Us on WhatsApp</a>
+            </div>
+            <div class="grid-item">
+                <img src="images/Valentine's Day Sweet Heart Fitted Crop Top.jpg" alt="Product 2">
+                <h2> Customized Tops </h2>
+                <p>Price: Depends on the type of top and quality. Price varies from 6k upwards</p>
+                <a href="https://wa.me/2348135077752" class="whatsapp-link" target="_blank">Contact Us on WhatsApp</a>
+            </div>
+            <div class="grid-item">
+                <img src="images/Custom Name Water Bottle 500ml – Personalized Logo Bottle, Insulated Flask, Bride Bridesmaid Wedding Gift, Sports & Gym Cup - Etsy.jpg" alt="Product 3">
+                <h2> Customized Bottle </h2>
+                <p>Price: ₦12,000. Depends on type of bottle or flask</p>
+                <a href="https://wa.me/2348135077752" class="whatsapp-link" target="_blank">Contact Us on WhatsApp</a>
+            </div>
+            <div class="grid-item">
+                <img src="images/Keychain,Wedding Gift,Customized Picture of Choice,two sided picture Keychain, Photo Keychain, Anniversary Gift, Key Holder, Choice of Shape.jpg" alt="Product 4">
+                <h2> Customized Key Chains </h2>
+                <p>Price: ₦2,000</p>
+                <a href="https://wa.me/2348135077752" class="whatsapp-link" target="_blank">Contact Us on WhatsApp</a>
+            </div>
+            <div class="grid-item">
+                <img src="images/download (5).jpg" alt="Product 5">
+                <h2> Frames </h2>
+                <p>Price: Depends on size and type</p>
+                <a href="https://wa.me/2348135077752" class="whatsapp-link" target="_blank">Contact Us on WhatsApp</a>
+            </div>
+            <div class="grid-item">
+                <img src="images/JDuniqueArtistry.jpg" alt="Product 6">
+                <h2> Throwpillows </h2>
+                <p>Price: Starting from ₦7,000 upwards</p>
+                <a href="https://wa.me/2348135077752" class="whatsapp-link" target="_blank">Contact Us on WhatsApp</a>
+            </div>
+            <div class="grid-item">
+                <img src="images/biobior Graphics.jpg" alt="Product 7">
+                <h2> Customized Mugs </h2>
+                <p>Price: Small normal - 5k, Small magic mug - 6.5k, Big normal - 7k, Big magic mug - 7.5k</p>
+                <a href="https://wa.me/2348135077752" class="whatsapp-link" target="_blank">Contact Us on WhatsApp</a>
+            </div>
+            <div class="grid-item">
+                <img src="images/Hardcover jotters by Vhik3Graphics.jpg" alt="Product 8">
+                <h2> Jotters </h2>
+                <p>Price: Hard Covered - 1,200 each, Normal Covered - 900</p>
+                <a href="https://wa.me/2348135077752" class="whatsapp-link" target="_blank">Contact Us on WhatsApp</a>
+            </div>
+            <div class="grid-item">
+                <img src="images/download (6).jpg" alt="Product 9">
+                <h2> Fancy Paper Bags </h2>
+                <p>Price: Depends on size and quantity</p>
+                <a href="https://wa.me/2348135077752" class="whatsapp-link" target="_blank">Contact Us on WhatsApp</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Olamide's Everything. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        if(searchInput){
+            searchInput.addEventListener('input', function () {
+                const products = document.querySelectorAll('.grid-item');
+                const searchText = searchInput.value.toLowerCase();
+                products.forEach(item => {
+                    const name = item.querySelector('h2') ? item.querySelector('h2').textContent.toLowerCase() : "";
+                    item.style.display = name.includes(searchText) ? "block" : "none";
+                });
+            });
+        }
+    </script>
+</body>
+</html>
